@@ -2,10 +2,10 @@
 const express = require("express");
 const router = express.Router();
 const Profile = require("../models/Profile");
-const validateToken = require("../middleware/authMiddleware"); // Import middleware
-
+const validateToken = require("../middleware/authMiddleware");
+ 
 // Apply middleware to all routes
-// router.use(validateToken);
+ router.use(validateToken)
 
 router.post("/profile", async (req, res) => {
   try {
